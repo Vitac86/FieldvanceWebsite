@@ -2,14 +2,18 @@ import { notFound } from 'next/navigation';
 
 import { isSupportedLocale } from '@/config/i18n';
 
-export default function LocaleLayout({
+type LangRouteParams = Promise<{ lang: string }>;
+
+export default async function LocaleLayout({
   children,
   params,
 }: {
   children: React.ReactNode;
-  params: { lang: string };
+  params: LangRouteParams;
 }) {
-  if (!isSupportedLocale(params.lang)) {
+  const { lang } = await params;
+
+  if (!isSupportedLocale(lang)) {
     notFound();
   }
 

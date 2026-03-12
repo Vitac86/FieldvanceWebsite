@@ -24,8 +24,10 @@ export function generateStaticParams() {
   return locales.map((lang) => ({ lang }));
 }
 
-export function generateMetadata({ params }: { params: { lang: string } }): Metadata {
-  const lang = params.lang;
+type LangRouteParams = Promise<{ lang: string }>;
+
+export async function generateMetadata({ params }: { params: LangRouteParams }): Promise<Metadata> {
+  const { lang } = await params;
 
   if (!isSupportedLocale(lang)) {
     return {};
@@ -60,17 +62,19 @@ export function generateMetadata({ params }: { params: { lang: string } }): Meta
   };
 }
 
-export default function LandingPage({ params }: { params: { lang: string } }) {
-  if (!isSupportedLocale(params.lang)) {
+export default async function LandingPage({ params }: { params: LangRouteParams }) {
+  const { lang } = await params;
+
+  if (!isSupportedLocale(lang)) {
     notFound();
   }
 
-  const lang = params.lang as Locale;
-  const content = getLandingContent(lang);
+  const locale = lang as Locale;
+  const content = getLandingContent(locale);
 
   return (
     <div className="min-h-screen">
-      <Header lang={lang} content={content.header} />
+      <Header lang={locale} content={content.header} />
       <main>
         <HeroSection content={content.hero} />
         <HowItWorksSection content={content.howItWorks} />
@@ -80,7 +84,7 @@ export default function LandingPage({ params }: { params: { lang: string } }) {
         <CtaSection content={content.finalCta} />
         <ContactSection content={content.contact} />
       </main>
-      <Footer content={content.footer} lang={lang} />
+      <Footer content={content.footer} lang={locale} />
     </div>
   );
 }
