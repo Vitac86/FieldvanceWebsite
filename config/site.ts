@@ -1,5 +1,6 @@
 export const siteConfig = {
   name: 'Fieldvance',
-  description: 'Placeholder one-page website for Fieldvance.',
+  description:
+    'Fieldvance is a mobile-first AI workflow layer for HVAC and plumbing service companies in Spain.',
   url: 'https://example.com',
 };
