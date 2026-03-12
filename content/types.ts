@@ -18,6 +18,10 @@ export type HowItWorksContent = {
   steps: Array<{ label: string; title: string; text: string }>;
 };
 
+export type TrustStripContent = {
+  points: string[];
+};
+
 export type CapabilitiesContent = {
   title: string;
   intro: string;
@@ -85,6 +89,7 @@ export type ContactSectionContent = {
 export type LandingContent = {
   header: HeaderContent;
   hero: HeroContent;
+  trustStrip: TrustStripContent;
   howItWorks: HowItWorksContent;
   capabilities: CapabilitiesContent;
   results: ResultsContent;

@@ -6,6 +6,7 @@ import { Header } from '@/components/layout/Header';
 import { ContactSection } from '@/components/sections/ContactSection';
 import { CtaSection } from '@/components/sections/CtaSection';
 import { HeroSection } from '@/components/sections/HeroSection';
+import { TrustStrip } from '@/components/sections/TrustStrip';
 import { HowItWorksSection } from '@/components/sections/HowItWorksSection';
 import { PricingSection } from '@/components/sections/PricingSection';
 import { ResultsSection } from '@/components/sections/ResultsSection';
@@ -77,6 +78,7 @@ export default async function LandingPage({ params }: { params: LangRouteParams 
       <Header lang={locale} content={content.header} />
       <main>
         <HeroSection content={content.hero} />
+        <TrustStrip content={content.trustStrip} />
         <HowItWorksSection content={content.howItWorks} />
         <ValuePropsSection content={content.capabilities} />
         <ResultsSection content={content.results} />
