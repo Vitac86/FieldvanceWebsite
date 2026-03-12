@@ -13,7 +13,7 @@ import { PricingSection } from '@/components/sections/PricingSection';
 import { ResultsSection } from '@/components/sections/ResultsSection';
 import { ValuePropsSection } from '@/components/sections/ValuePropsSection';
 import { locales, type Locale, isSupportedLocale } from '@/config/i18n';
-import { siteConfig } from '@/config/site';
+import { getSiteUrl, localeMetadata, siteConfig } from '@/config/site';
 import { getLandingContent } from '@/lib/get-landing-content';
 
 const localeForOg: Record<Locale, string> = {
@@ -35,11 +35,13 @@ export async function generateMetadata({ params }: { params: LangRouteParams }):
     return {};
   }
 
-  const content = getLandingContent(lang);
+  const metadata = localeMetadata[lang];
+  const siteUrl = getSiteUrl();
+  const ogImage = `/${lang}/opengraph-image`;
 
   return {
-    title: content.hero.title,
-    description: content.hero.subtitle,
+    title: metadata.title,
+    description: metadata.description,
     alternates: {
       canonical: `/${lang}`,
       languages: {
@@ -50,16 +52,25 @@ export async function generateMetadata({ params }: { params: LangRouteParams }):
     },
     openGraph: {
       type: 'website',
-      title: content.hero.title,
-      description: content.hero.subtitle,
-      url: `${siteConfig.url}/${lang}`,
+      title: metadata.title,
+      description: metadata.description,
+      url: `${siteUrl}/${lang}`,
       siteName: siteConfig.name,
       locale: localeForOg[lang],
+      images: [
+        {
+          url: ogImage,
+          width: 1200,
+          height: 630,
+          alt: `${siteConfig.name} product preview`,
+        },
+      ],
     },
     twitter: {
       card: 'summary_large_image',
-      title: content.hero.title,
-      description: content.hero.subtitle,
+      title: metadata.title,
+      description: metadata.description,
+      images: [ogImage],
     },
   };
 }
