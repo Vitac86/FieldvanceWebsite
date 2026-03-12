@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 
+import { CookieNotice } from '@/components/layout/CookieNotice';
 import { Footer } from '@/components/layout/Footer';
 import { Header } from '@/components/layout/Header';
 import { ContactSection } from '@/components/sections/ContactSection';
@@ -87,6 +88,7 @@ export default async function LandingPage({ params }: { params: LangRouteParams 
         <ContactSection content={content.contact} />
       </main>
       <Footer content={content.footer} lang={locale} />
+      <CookieNotice content={content.footer} lang={locale} />
     </div>
   );
 }
