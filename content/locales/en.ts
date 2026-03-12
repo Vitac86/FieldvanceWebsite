@@ -137,7 +137,9 @@ export const enContent: LandingContent = {
     },
   },
   footer: {
-    contactCta: 'Contact us',
+    actionTitle: 'Ready to evaluate Fieldvance?',
+    actionText: 'Tell us about your operation and we will map the best rollout path.',
+    actionLabel: 'Request a walkthrough',
     privacyLabel: 'Privacy Policy',
     termsLabel: 'Terms',
     copyright: 'Fieldvance',
