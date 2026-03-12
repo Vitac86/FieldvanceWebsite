@@ -23,15 +23,15 @@ body {
 }
 
 .container-page {
-  @apply mx-auto w-full max-w-7xl px-6 sm:px-8;
+  @apply mx-auto w-full max-w-[76rem] px-6 sm:px-8;
 }
 
 .section-space {
-  @apply py-20 sm:py-24;
+  @apply py-16 sm:py-20;
 }
 
 .section-shell {
-  @apply rounded-xl border bg-white p-7 shadow-[0_2px_6px_rgba(15,23,42,0.05)] sm:p-8;
+  @apply rounded-xl border bg-white p-6 shadow-[0_2px_6px_rgba(15,23,42,0.05)] sm:p-7;
   border-color: var(--border-soft);
 }
 
@@ -41,7 +41,7 @@ body {
 }
 
 .card-base {
-  @apply rounded-lg border bg-white p-7 shadow-[0_1px_3px_rgba(15,23,42,0.06)];
+  @apply rounded-lg border bg-white p-6 shadow-[0_1px_3px_rgba(15,23,42,0.06)];
   border-color: var(--border-soft);
 }
 
