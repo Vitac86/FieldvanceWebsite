@@ -137,7 +137,9 @@ export const esContent: LandingContent = {
     },
   },
   footer: {
-    contactCta: 'Contáctanos',
+    actionTitle: '¿Listo para evaluar Fieldvance?',
+    actionText: 'Cuéntanos sobre tu operación y definiremos la mejor ruta de implementación.',
+    actionLabel: 'Solicitar una sesión guiada',
     privacyLabel: 'Política de privacidad',
     termsLabel: 'Términos',
     copyright: 'Fieldvance',

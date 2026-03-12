@@ -137,7 +137,9 @@ export const ruContent: LandingContent = {
     },
   },
   footer: {
-    contactCta: 'Связаться с нами',
+    actionTitle: 'Готовы оценить Fieldvance?',
+    actionText: 'Расскажите о вашей операции, и мы предложим оптимальный сценарий внедрения.',
+    actionLabel: 'Запросить обзор решения',
     privacyLabel: 'Политика конфиденциальности',
     termsLabel: 'Условия использования',
     copyright: 'Fieldvance',
