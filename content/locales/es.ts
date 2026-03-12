@@ -63,10 +63,10 @@ export const esContent: LandingContent = {
     ],
   },
   results: {
-    title: 'Resultados de pilotos',
-    intro: 'Resultados medidos en los primeros pilotos con empresas de HVAC y fontanería.',
+    title: 'Resultados iniciales',
+    intro: 'Resultados medidos en los primeros despliegues activos de Fieldvance.',
     metrics: [
-      { label: 'Empresas piloto', value: '3', note: 'Entornos piloto activos' },
+      { label: 'Tracción inicial', value: '3 empresas', note: 'Operando con flujos de Fieldvance en producción' },
       { label: 'Técnicos activos al día', value: '18', note: 'Usando el flujo móvil cada día' },
       { label: 'Servicios registrados', value: '~200', note: 'Servicios ejecutados y medidos con Fieldvance' },
       { label: 'Tiempo medio de informe', value: '~12m → ~2m', note: 'Generación y sincronización de informes más rápidas' },

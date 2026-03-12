@@ -63,10 +63,10 @@ export const enContent: LandingContent = {
     ],
   },
   results: {
-    title: 'Pilot results',
-    intro: 'Measured outcomes from early pilots with HVAC and plumbing companies.',
+    title: 'Early results',
+    intro: 'Measured outcomes from the first live Fieldvance deployments.',
     metrics: [
-      { label: 'Pilot companies', value: '3', note: 'Live pilot environments' },
+      { label: 'Early traction', value: '3 companies', note: 'Running live Fieldvance workflows' },
       { label: 'Daily active technicians', value: '18', note: 'Using the mobile workflow each day' },
       { label: 'Tracked service calls', value: '~200', note: 'Calls executed and measured in Fieldvance' },
       { label: 'Average report time', value: '~12m → ~2m', note: 'Faster report generation and sync' },
