@@ -23,23 +23,49 @@ export function HeroSection({ content }: { content: HeroContent }) {
         <div className="rounded-xl border border-border-soft bg-white p-5 shadow-[0_3px_12px_rgba(15,23,42,0.06)] sm:p-6">
           <div className="rounded-lg bg-surface-dark p-4 text-slate-100 sm:p-5">
             <div className="mb-3.5 flex items-center justify-between text-xs text-slate-300">
-              <span>Dispatch context</span>
-              <span className="accent-chip">Live workflow</span>
+              <span>Work order #2487</span>
+              <span className="accent-chip">Workflow active</span>
             </div>
-            <div className="space-y-2.5">
+            <div className="space-y-2.5 text-[0.8rem] leading-5 sm:text-sm">
               <div className="rounded-lg bg-surface-dark-soft p-2.5 sm:p-3">
-                <p className="text-xs uppercase tracking-wide text-slate-400">Job brief</p>
-                <p className="mt-1 text-sm">Customer history, equipment notes, and required checklist loaded.</p>
+                <p className="text-xs uppercase tracking-wide text-slate-400">Dispatch context</p>
+                <p className="mt-1">Rooftop no-cool repeat call · Unit RTU-3 · Access code and prior notes loaded.</p>
               </div>
+
+              <div className="rounded-lg bg-surface-dark-soft p-2.5 sm:p-3">
+                <div className="flex items-center justify-between">
+                  <p className="text-xs uppercase tracking-wide text-slate-400">Guided steps</p>
+                  <p className="text-xs text-slate-400">3/4 complete</p>
+                </div>
+                <div className="mt-2 space-y-1.5">
+                  <div className="flex items-center justify-between rounded-md bg-white/5 px-2 py-1.5">
+                    <span>1. Confirm power and thermostat</span>
+                    <span className="text-accent-primary">Done</span>
+                  </div>
+                  <div className="flex items-center justify-between rounded-md bg-white/5 px-2 py-1.5">
+                    <span>2. Inspect condenser and coils</span>
+                    <span className="text-accent-primary">Done</span>
+                  </div>
+                  <div className="flex items-center justify-between rounded-md bg-white/10 px-2 py-1.5">
+                    <span>3. Capture refrigerant readings</span>
+                    <span className="text-amber-300">In progress</span>
+                  </div>
+                </div>
+              </div>
+
               <div className="grid gap-2.5 sm:grid-cols-2">
                 <div className="rounded-lg bg-surface-dark-soft p-2.5 sm:p-3">
-                  <p className="text-xs uppercase tracking-wide text-slate-400">Guided steps</p>
-                  <div className="mt-2 h-2 rounded bg-accent-primary/35" />
-                  <div className="mt-2 h-2 w-4/5 rounded bg-accent-primary/45" />
+                  <p className="text-xs uppercase tracking-wide text-slate-400">Validation</p>
+                  <ul className="mt-1 space-y-1 text-slate-200">
+                    <li>• 3 photos attached</li>
+                    <li>• Suction / discharge logged</li>
+                    <li>• Part used: 40/5 capacitor</li>
+                  </ul>
                 </div>
                 <div className="rounded-lg bg-surface-dark-soft p-2.5 sm:p-3">
-                  <p className="text-xs uppercase tracking-wide text-slate-400">Validation</p>
-                  <p className="mt-1 text-sm text-accent-primary">Evidence complete</p>
+                  <p className="text-xs uppercase tracking-wide text-slate-400">Service report</p>
+                  <p className="mt-1 text-slate-200">Summary drafted from technician inputs.</p>
+                  <p className="mt-2 text-sm text-accent-primary">Ready to sync to CRM/FSM</p>
                 </div>
               </div>
             </div>
