@@ -17,7 +17,7 @@ export const enContent: LandingContent = {
       'Fieldvance adds a mobile AI workflow to your existing CRM/FSM so technicians arrive prepared, follow approved troubleshooting steps, and finish with validated reports.',
     primaryCta: 'Book a demo',
     secondaryCta: 'View pricing',
-    visualLabel: 'Product workflow preview placeholder',
+    visualLabel: 'Product workflow preview',
   },
   howItWorks: {
     title: 'How it works',

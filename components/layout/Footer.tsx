@@ -11,10 +11,6 @@ export function Footer({ content, lang }: { content: FooterContent; lang: Locale
           <Logo lang={lang} className="inline-flex w-[124px] sm:w-[136px]" />
           <p>{content.note}</p>
         </div>
-        <p className="text-xs uppercase tracking-[0.14em] text-slate-400">
-          <span className="mr-1 text-accent-strong">•</span>
-          Legal & contact details to be confirmed
-        </p>
       </div>
     </footer>
   );
