@@ -4,6 +4,7 @@ import { type Locale } from '@/config/i18n';
 import { type HeaderContent } from '@/content/types';
 
 import { LanguageSwitcher } from './LanguageSwitcher';
+import { Logo } from '../ui/Logo';
 
 type HeaderProps = {
   lang: Locale;
@@ -14,10 +15,7 @@ export function Header({ lang, content }: HeaderProps) {
   return (
     <header className="sticky top-0 z-30 border-b border-border-soft/90 bg-slate-50/90 backdrop-blur-md">
       <div className="container-page flex h-[72px] items-center justify-between gap-5">
-        <p className="text-lg font-extrabold tracking-tight text-slate-900">
-          {content.brand}
-          <span className="ml-1 align-middle text-accent-primary">•</span>
-        </p>
+        <Logo lang={lang} className="inline-flex w-[132px] sm:w-[148px]" priority />
         <nav aria-label="Section navigation" className="hidden items-center gap-6 md:flex">
           {content.nav.map((item) => (
             <Link

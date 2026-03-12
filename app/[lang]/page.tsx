@@ -80,7 +80,7 @@ export default function LandingPage({ params }: { params: { lang: string } }) {
         <CtaSection content={content.finalCta} />
         <ContactSection content={content.contact} />
       </main>
-      <Footer content={content.footer} />
+      <Footer content={content.footer} lang={lang} />
     </div>
   );
 }
