@@ -140,5 +140,9 @@ export const ruContent: LandingContent = {
     privacyLabel: 'Политика конфиденциальности',
     termsLabel: 'Условия использования',
     copyright: 'Fieldvance',
+    cookieNotice: {
+      text: 'Мы используем необходимые cookie, чтобы сайт работал корректно.',
+      acceptLabel: 'Принять',
+    },
   },
 };

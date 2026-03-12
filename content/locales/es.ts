@@ -140,5 +140,9 @@ export const esContent: LandingContent = {
     privacyLabel: 'Política de privacidad',
     termsLabel: 'Términos',
     copyright: 'Fieldvance',
+    cookieNotice: {
+      text: 'Usamos cookies esenciales para que este sitio funcione correctamente.',
+      acceptLabel: 'Aceptar',
+    },
   },
 };

@@ -59,6 +59,10 @@ export type FooterContent = {
   privacyLabel: string;
   termsLabel: string;
   copyright: string;
+  cookieNotice: {
+    text: string;
+    acceptLabel: string;
+  };
 };
 
 export type ContactSectionContent = {
