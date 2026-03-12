@@ -10,7 +10,14 @@ import { PricingSection } from '@/components/sections/PricingSection';
 import { ResultsSection } from '@/components/sections/ResultsSection';
 import { ValuePropsSection } from '@/components/sections/ValuePropsSection';
 import { locales, type Locale, isSupportedLocale } from '@/config/i18n';
+import { siteConfig } from '@/config/site';
 import { getLandingContent } from '@/lib/get-landing-content';
+
+const localeForOg: Record<Locale, string> = {
+  en: 'en_US',
+  es: 'es_ES',
+  ru: 'ru_RU',
+};
 
 export function generateStaticParams() {
   return locales.map((lang) => ({ lang }));
@@ -30,6 +37,24 @@ export function generateMetadata({ params }: { params: { lang: string } }): Meta
     description: content.hero.subtitle,
     alternates: {
       canonical: `/${lang}`,
+      languages: {
+        en: '/en',
+        es: '/es',
+        ru: '/ru',
+      },
+    },
+    openGraph: {
+      type: 'website',
+      title: content.hero.title,
+      description: content.hero.subtitle,
+      url: `${siteConfig.url}/${lang}`,
+      siteName: siteConfig.name,
+      locale: localeForOg[lang],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: content.hero.title,
+      description: content.hero.subtitle,
     },
   };
 }

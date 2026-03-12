@@ -6,10 +6,18 @@
   color-scheme: light;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   @apply bg-white text-slate-900 antialiased;
 }
 
 .container-page {
   @apply mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8;
+}
+
+.section-space {
+  @apply py-14 sm:py-16;
 }

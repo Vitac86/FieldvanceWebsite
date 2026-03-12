@@ -8,7 +8,7 @@ type LanguageSwitcherProps = {
 
 export function LanguageSwitcher({ currentLocale }: LanguageSwitcherProps) {
   return (
-    <div className="flex items-center gap-2 text-sm">
+    <div className="flex items-center gap-1 rounded-md border border-slate-200 p-1 text-xs sm:text-sm" aria-label="Language switcher">
       {locales.map((locale) => (
         <Link
           key={locale}

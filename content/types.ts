@@ -1,5 +1,6 @@
 export type HeaderContent = {
   brand: string;
+  nav: Array<{ label: string; href: string }>;
 };
 
 export type HeroContent = {
@@ -8,25 +9,30 @@ export type HeroContent = {
   subtitle: string;
   primaryCta: string;
   secondaryCta: string;
+  visualLabel: string;
 };
 
 export type HowItWorksContent = {
   title: string;
-  steps: Array<{ label: string; text: string }>;
+  intro: string;
+  steps: Array<{ label: string; title: string; text: string }>;
 };
 
 export type CapabilitiesContent = {
   title: string;
-  items: string[];
+  intro: string;
+  items: Array<{ title: string; text: string }>;
 };
 
 export type ResultsContent = {
   title: string;
-  metrics: Array<{ label: string; value: string }>;
+  intro: string;
+  metrics: Array<{ label: string; value: string; note: string }>;
 };
 
 export type PricingContent = {
   title: string;
+  intro: string;
   cardCta: string;
   plans: Array<{
     name: string;
@@ -34,6 +40,7 @@ export type PricingContent = {
     points: string[];
   }>;
   setupFeeNote: string;
+  annualNote: string;
 };
 
 export type FinalCtaContent = {
