@@ -14,14 +14,14 @@ type HeaderProps = {
 export function Header({ lang, content }: HeaderProps) {
   return (
     <header className="sticky top-0 z-30 border-b border-border-soft/90 bg-slate-50/90 backdrop-blur-md">
-      <div className="container-page flex h-[72px] items-center justify-between gap-5">
-        <Logo lang={lang} className="inline-flex w-[132px] sm:w-[148px]" priority />
-        <nav aria-label="Section navigation" className="hidden items-center gap-6 md:flex">
+      <div className="container-page flex h-[80px] items-center justify-between gap-5 sm:h-[84px]">
+        <Logo lang={lang} className="inline-flex w-[146px] sm:w-[164px]" priority />
+        <nav aria-label="Section navigation" className="hidden items-center gap-7 md:flex">
           {content.nav.map((item) => (
             <Link
               key={item.href}
               href={item.href}
-              className="text-sm font-medium text-slate-600 transition hover:text-accent-strong"
+              className="text-[0.95rem] font-semibold text-slate-600 transition hover:text-accent-strong"
             >
               {item.label}
             </Link>
