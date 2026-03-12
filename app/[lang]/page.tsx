@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation';
 
 import { Footer } from '@/components/layout/Footer';
 import { Header } from '@/components/layout/Header';
+import { ContactSection } from '@/components/sections/ContactSection';
 import { CtaSection } from '@/components/sections/CtaSection';
 import { HeroSection } from '@/components/sections/HeroSection';
 import { HowItWorksSection } from '@/components/sections/HowItWorksSection';
@@ -77,6 +78,7 @@ export default function LandingPage({ params }: { params: { lang: string } }) {
         <ResultsSection content={content.results} />
         <PricingSection content={content.pricing} />
         <CtaSection content={content.finalCta} />
+        <ContactSection content={content.contact} />
       </main>
       <Footer content={content.footer} />
     </div>

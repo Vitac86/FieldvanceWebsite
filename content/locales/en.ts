@@ -101,7 +101,31 @@ export const enContent: LandingContent = {
     title: 'Improve field quality without replacing your CRM/FSM',
     text: 'See how Fieldvance can standardize execution, reporting, and supervisor oversight across your service operation.',
     ctaLabel: 'Request a walkthrough',
-    href: '#',
+    href: '#contact',
+  },
+  contact: {
+    kicker: 'Contact',
+    title: 'Request a demo or ask a question',
+    text: 'Tell us a bit about your operation and we will follow up to schedule a walkthrough.',
+    helper: 'All fields are required.',
+    fields: {
+      name: { label: 'Name', placeholder: 'Your full name' },
+      phone: { label: 'Phone', placeholder: 'Your phone number' },
+      email: { label: 'Email', placeholder: 'you@company.com' },
+      message: { label: 'Message', placeholder: 'What would you like to improve in your field operation?' },
+    },
+    validation: {
+      nameRequired: 'Please enter your name.',
+      phoneRequired: 'Please enter your phone number.',
+      emailRequired: 'Please enter your email address.',
+      emailInvalid: 'Please enter a valid email address.',
+      messageRequired: 'Please enter your message.',
+    },
+    submit: {
+      default: 'Send request',
+      submitting: 'Sending...',
+      success: 'Thanks. Your request has been captured. We will follow up soon.',
+    },
   },
   footer: {
     note: '© Fieldvance. AI workflow layer for HVAC and plumbing service companies in Spain.',
