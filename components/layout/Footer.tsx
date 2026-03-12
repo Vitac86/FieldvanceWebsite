@@ -9,8 +9,8 @@ export function Footer({ content, lang }: { content: FooterContent; lang: Locale
   const year = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-border-soft bg-white py-8 sm:py-10">
-      <div className="container-page grid gap-6 text-sm text-slate-500">
+    <footer className="border-t border-border-soft bg-white py-7 sm:py-8">
+      <div className="container-page grid gap-5 text-sm text-slate-500">
         <div className="flex flex-wrap items-center justify-between gap-4">
           <Logo lang={lang} className="inline-flex w-[124px] sm:w-[136px]" />
           <Link

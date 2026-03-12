@@ -99,15 +99,15 @@ export function ContactSection({ content }: { content: ContactSectionContent }) 
   };
 
   return (
-    <section id="contact" className="section-space pb-12 pt-10 sm:pb-14 sm:pt-12">
+    <section id="contact" className="section-space pb-8 pt-0 sm:pb-10">
       <div className="container-page">
-        <div className="grid gap-6 rounded-xl border border-border-soft bg-white p-6 shadow-[0_2px_8px_rgba(15,23,42,0.06)] sm:p-7 lg:grid-cols-[1fr_1.12fr] lg:gap-8">
+        <div className="grid gap-5 rounded-xl border border-border-soft bg-white p-6 shadow-[0_2px_8px_rgba(15,23,42,0.06)] sm:p-7 lg:grid-cols-[1fr_1.12fr] lg:gap-7">
           <div>
             <p className="section-kicker">{content.kicker}</p>
-            <div className="accent-divider mt-2.5" aria-hidden />
-            <h2 className="mt-2.5 text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">{content.title}</h2>
-            <p className="mt-3 max-w-xl text-sm leading-relaxed text-slate-600 sm:text-base">{content.text}</p>
-            <p className="mt-3 text-xs text-slate-500">{content.helper}</p>
+            <div className="accent-divider mt-2" aria-hidden />
+            <h2 className="mt-2 text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">{content.title}</h2>
+            <p className="mt-2.5 max-w-xl text-sm leading-relaxed text-slate-600 sm:text-base">{content.text}</p>
+            <p className="mt-2.5 text-xs text-slate-500">{content.helper}</p>
           </div>
 
           <div>

@@ -5,8 +5,8 @@ import { SectionShell } from './SectionShell';
 
 export function PricingSection({ content }: { content: PricingContent }) {
   return (
-    <SectionShell id="pricing" title={content.title} intro={content.intro}>
-      <div className="grid gap-4 lg:grid-cols-3 lg:items-stretch">
+    <SectionShell id="pricing" title={content.title} intro={content.intro} shellClassName="lg:p-6" bodyClassName="lg:mt-4">
+      <div className="grid gap-3.5 lg:grid-cols-3 lg:items-stretch lg:gap-4">
         {content.plans.map((plan, index) => {
           const featured = index === 1;
 
@@ -15,7 +15,7 @@ export function PricingSection({ content }: { content: PricingContent }) {
               key={plan.name}
               className={`relative flex flex-col ${
                 featured
-                  ? 'rounded-lg border-2 border-accent-primary bg-surface-dark p-6 text-white shadow-[0_12px_28px_rgba(11,22,47,0.32)] lg:-mt-2 lg:mb-2'
+                  ? 'rounded-lg border-2 border-accent-primary bg-surface-dark p-5 text-white shadow-[0_12px_28px_rgba(11,22,47,0.32)] lg:-mt-1 lg:mb-1'
                   : 'card-base'
               }`}
             >
@@ -49,7 +49,7 @@ export function PricingSection({ content }: { content: PricingContent }) {
           );
         })}
       </div>
-      <div className="mt-6 rounded-lg border border-border-soft bg-accent-soft p-4 text-sm text-slate-700">
+      <div className="mt-5 rounded-lg border border-border-soft bg-accent-soft p-4 text-sm text-slate-700">
         <p>{content.setupFeeNote}</p>
         <p className="mt-1">{content.annualNote}</p>
       </div>
