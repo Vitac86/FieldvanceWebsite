@@ -133,6 +133,7 @@ export const enContent: LandingContent = {
       default: 'Send request',
       submitting: 'Sending...',
       success: 'Thanks. Your request has been captured. We will follow up soon.',
+      error: 'We could not send your request right now. Please try again in a moment.',
     },
   },
   footer: {

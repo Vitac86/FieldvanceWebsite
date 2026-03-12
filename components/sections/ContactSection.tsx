@@ -2,7 +2,7 @@
 
 import { type FormEvent, type HTMLInputTypeAttribute, useId, useState } from 'react';
 
-import { submitContactFormPlaceholder, type ContactSubmissionPayload } from '@/lib/submit-contact-form';
+import { submitContactForm, type ContactSubmissionPayload } from '@/lib/submit-contact-form';
 import { type ContactSectionContent } from '@/content/types';
 
 type ContactFormState = {
@@ -23,11 +23,14 @@ export function ContactSection({ content }: { content: ContactSectionContent }) 
   });
   const [errors, setErrors] = useState<Partial<Record<keyof ContactFormState, string>>>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [submitState, setSubmitState] = useState<'idle' | 'success' | 'error'>('idle');
   const statusId = useId();
 
   const handleFieldChange = (field: keyof ContactFormState, value: string) => {
     setFormValues((prev) => ({ ...prev, [field]: value }));
+    if (submitState !== 'idle') {
+      setSubmitState('idle');
+    }
     setErrors((prev) => {
       if (!prev[field]) {
         return prev;
@@ -68,10 +71,12 @@ export function ContactSection({ content }: { content: ContactSectionContent }) 
     event.preventDefault();
 
     if (!validate()) {
+      setSubmitState('error');
       return;
     }
 
     setIsSubmitting(true);
+    setSubmitState('idle');
 
     const payload: ContactSubmissionPayload = {
       name: formValues.name.trim(),
@@ -81,12 +86,16 @@ export function ContactSection({ content }: { content: ContactSectionContent }) 
       submittedAt: new Date().toISOString(),
     };
 
-    await submitContactFormPlaceholder(payload);
-
-    setIsSubmitting(false);
-    setIsSubmitted(true);
-    setFormValues({ name: '', email: '', phone: '', message: '' });
-    setErrors({});
+    try {
+      await submitContactForm(payload);
+      setSubmitState('success');
+      setFormValues({ name: '', email: '', phone: '', message: '' });
+      setErrors({});
+    } catch {
+      setSubmitState('error');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -153,8 +162,13 @@ export function ContactSection({ content }: { content: ContactSectionContent }) 
                 {isSubmitting ? content.submit.submitting : content.submit.default}
               </button>
 
-              <p id={statusId} className="min-h-5 text-sm text-slate-700" aria-live="polite">
-                {isSubmitted ? content.submit.success : ''}
+              <p
+                id={statusId}
+                className={`min-h-5 text-sm ${submitState === 'error' ? 'text-rose-600' : 'text-slate-700'}`}
+                aria-live="polite"
+              >
+                {submitState === 'success' ? content.submit.success : ''}
+                {submitState === 'error' ? content.submit.error : ''}
               </p>
             </form>
           </div>

@@ -87,6 +87,7 @@ export type ContactSectionContent = {
     default: string;
     submitting: string;
     success: string;
+    error: string;
   };
 };
 
