@@ -101,7 +101,31 @@ export const esContent: LandingContent = {
     title: 'Mejora la calidad en campo sin sustituir tu CRM/FSM',
     text: 'Descubre cómo Fieldvance puede estandarizar la ejecución, los informes y la supervisión en toda tu operación de servicio.',
     ctaLabel: 'Solicitar una sesión guiada',
-    href: '#',
+    href: '#contact',
+  },
+  contact: {
+    kicker: 'Contacto',
+    title: 'Solicita una demo o haz una consulta',
+    text: 'Cuéntanos brevemente sobre tu operación y te contactaremos para programar una sesión guiada.',
+    helper: 'Todos los campos son obligatorios.',
+    fields: {
+      name: { label: 'Nombre', placeholder: 'Tu nombre completo' },
+      phone: { label: 'Teléfono', placeholder: 'Tu número de teléfono' },
+      email: { label: 'Correo electrónico', placeholder: 'tu@empresa.com' },
+      message: { label: 'Mensaje', placeholder: '¿Qué te gustaría mejorar en tu operación de campo?' },
+    },
+    validation: {
+      nameRequired: 'Por favor, introduce tu nombre.',
+      phoneRequired: 'Por favor, introduce tu número de teléfono.',
+      emailRequired: 'Por favor, introduce tu correo electrónico.',
+      emailInvalid: 'Por favor, introduce un correo electrónico válido.',
+      messageRequired: 'Por favor, introduce tu mensaje.',
+    },
+    submit: {
+      default: 'Enviar solicitud',
+      submitting: 'Enviando...',
+      success: 'Gracias. Hemos recibido tu solicitud. Te contactaremos pronto.',
+    },
   },
   footer: {
     note: '© Fieldvance. Capa de flujo de trabajo con IA para empresas de servicio de HVAC y fontanería en España.',

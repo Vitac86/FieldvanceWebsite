@@ -54,6 +54,31 @@ export type FooterContent = {
   note: string;
 };
 
+export type ContactSectionContent = {
+  kicker: string;
+  title: string;
+  text: string;
+  helper: string;
+  fields: {
+    name: { label: string; placeholder: string };
+    phone: { label: string; placeholder: string };
+    email: { label: string; placeholder: string };
+    message: { label: string; placeholder: string };
+  };
+  validation: {
+    nameRequired: string;
+    phoneRequired: string;
+    emailRequired: string;
+    emailInvalid: string;
+    messageRequired: string;
+  };
+  submit: {
+    default: string;
+    submitting: string;
+    success: string;
+  };
+};
+
 export type LandingContent = {
   header: HeaderContent;
   hero: HeroContent;
@@ -62,5 +87,6 @@ export type LandingContent = {
   results: ResultsContent;
   pricing: PricingContent;
   finalCta: FinalCtaContent;
+  contact: ContactSectionContent;
   footer: FooterContent;
 };

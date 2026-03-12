@@ -101,7 +101,31 @@ export const ruContent: LandingContent = {
     title: 'Повышайте качество работ в поле без замены CRM/FSM',
     text: 'Посмотрите, как Fieldvance помогает стандартизировать исполнение, отчетность и контроль супервайзеров во всей сервисной операции.',
     ctaLabel: 'Запросить обзор решения',
-    href: '#',
+    href: '#contact',
+  },
+  contact: {
+    kicker: 'Контакты',
+    title: 'Запросите демо или задайте вопрос',
+    text: 'Кратко опишите вашу сервисную операцию, и мы свяжемся с вами для согласования демонстрации.',
+    helper: 'Все поля обязательны.',
+    fields: {
+      name: { label: 'Имя', placeholder: 'Ваше полное имя' },
+      phone: { label: 'Телефон', placeholder: 'Ваш номер телефона' },
+      email: { label: 'Email', placeholder: 'you@company.com' },
+      message: { label: 'Сообщение', placeholder: 'Что вы хотите улучшить в полевой работе?' },
+    },
+    validation: {
+      nameRequired: 'Пожалуйста, укажите имя.',
+      phoneRequired: 'Пожалуйста, укажите номер телефона.',
+      emailRequired: 'Пожалуйста, укажите email.',
+      emailInvalid: 'Пожалуйста, укажите корректный email.',
+      messageRequired: 'Пожалуйста, добавьте сообщение.',
+    },
+    submit: {
+      default: 'Отправить запрос',
+      submitting: 'Отправка...',
+      success: 'Спасибо. Ваш запрос получен. Мы скоро свяжемся с вами.',
+    },
   },
   footer: {
     note: '© Fieldvance. AI-слой воркфлоу для сервисных компаний HVAC и сантехники в Испании.',
