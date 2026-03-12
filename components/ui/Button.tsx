@@ -7,10 +7,10 @@ type ButtonProps = {
 };
 
 const baseStyles =
-  'inline-flex items-center justify-center rounded-lg px-5 py-2.5 text-sm font-semibold transition-all duration-150';
+  'inline-flex items-center justify-center rounded-lg px-6 py-3 text-sm font-semibold transition-all duration-150';
 
 const variantStyles: Record<NonNullable<ButtonProps['variant']>, string> = {
-  primary: 'bg-cyan-600 text-white hover:bg-cyan-500 shadow-sm shadow-cyan-900/20',
+  primary: 'bg-cyan-600 text-white hover:bg-cyan-500 shadow-[0_4px_12px_rgba(8,145,178,0.28)]',
   secondary: 'border border-slate-300 bg-white text-slate-900 hover:border-cyan-600 hover:text-cyan-700',
   ghost: 'text-slate-700 hover:text-slate-900',
 };
