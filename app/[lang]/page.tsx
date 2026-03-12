@@ -13,7 +13,7 @@ import { PricingSection } from '@/components/sections/PricingSection';
 import { ResultsSection } from '@/components/sections/ResultsSection';
 import { ValuePropsSection } from '@/components/sections/ValuePropsSection';
 import { locales, type Locale, isSupportedLocale } from '@/config/i18n';
-import { getSiteUrl, localeMetadata, siteConfig } from '@/config/site';
+import { getConfiguredSiteUrl, localeMetadata, siteConfig } from '@/config/site';
 import { getLandingContent } from '@/lib/get-landing-content';
 
 const localeForOg: Record<Locale, string> = {
@@ -36,14 +36,14 @@ export async function generateMetadata({ params }: { params: LangRouteParams }):
   }
 
   const metadata = localeMetadata[lang];
-  const siteUrl = getSiteUrl();
+  const siteUrl = getConfiguredSiteUrl();
   const ogImage = `/${lang}/opengraph-image`;
 
   return {
     title: metadata.title,
     description: metadata.description,
     alternates: {
-      canonical: `/${lang}`,
+      ...(siteUrl ? { canonical: `/${lang}` } : {}),
       languages: {
         en: '/en',
         es: '/es',
@@ -54,7 +54,7 @@ export async function generateMetadata({ params }: { params: LangRouteParams }):
       type: 'website',
       title: metadata.title,
       description: metadata.description,
-      url: `${siteUrl}/${lang}`,
+      ...(siteUrl ? { url: `${siteUrl}/${lang}` } : {}),
       siteName: siteConfig.name,
       locale: localeForOg[lang],
       images: [

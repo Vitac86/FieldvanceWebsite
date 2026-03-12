@@ -1,7 +1,9 @@
 import type { Metadata } from 'next';
 import './globals.css';
 
-import { getMetadataBase, siteConfig } from '@/config/site';
+import { getMetadataBase, hasConfiguredSiteUrl, siteConfig } from '@/config/site';
+
+const hasLiveSiteUrl = hasConfiguredSiteUrl();
 
 export const metadata: Metadata = {
   metadataBase: getMetadataBase(),
@@ -18,8 +20,21 @@ export const metadata: Metadata = {
       ru: '/ru',
     },
   },
+  robots: hasLiveSiteUrl
+    ? {
+        index: true,
+        follow: true,
+      }
+    : {
+        index: false,
+        follow: false,
+      },
   icons: {
-    icon: [{ url: '/favicon.svg', type: 'image/svg+xml' }, { url: '/icon', type: 'image/png' }],
+    icon: [
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+      { url: '/icon', type: 'image/png' },
+    ],
+    shortcut: [{ url: '/favicon.svg', type: 'image/svg+xml' }],
     apple: [{ url: '/apple-icon', type: 'image/png', sizes: '180x180' }],
   },
   manifest: '/manifest.webmanifest',
