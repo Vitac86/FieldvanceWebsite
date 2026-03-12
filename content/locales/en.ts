@@ -19,6 +19,14 @@ export const enContent: LandingContent = {
     secondaryCta: 'View pricing',
     visualLabel: 'Product workflow preview',
   },
+  trustStrip: {
+    points: [
+      'Works with your existing CRM/FSM workflows',
+      'Structured evidence capture on every service call',
+      'Validation checks before report completion',
+      'Supervisor visibility and standardized reporting quality',
+    ],
+  },
   howItWorks: {
     title: 'How it works',
     intro: 'One workflow from dispatch context to synced report.',

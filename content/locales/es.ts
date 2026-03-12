@@ -19,6 +19,14 @@ export const esContent: LandingContent = {
     secondaryCta: 'Ver precios',
     visualLabel: 'Vista previa del flujo de producto',
   },
+  trustStrip: {
+    points: [
+      'Funciona con tus flujos actuales de CRM/FSM',
+      'Captura estructurada de evidencia en cada servicio',
+      'Validaciones antes de completar el informe',
+      'Visibilidad para supervisión y calidad de reportes estandarizada',
+    ],
+  },
   howItWorks: {
     title: 'Cómo funciona',
     intro: 'Un único flujo, desde el contexto previo al envío hasta el informe sincronizado.',
