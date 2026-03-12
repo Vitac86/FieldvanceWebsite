@@ -51,7 +51,10 @@ export type FinalCtaContent = {
 };
 
 export type FooterContent = {
-  note: string;
+  contactCta: string;
+  privacyLabel: string;
+  termsLabel: string;
+  copyright: string;
 };
 
 export type ContactSectionContent = {

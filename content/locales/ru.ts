@@ -128,6 +128,9 @@ export const ruContent: LandingContent = {
     },
   },
   footer: {
-    note: '© Fieldvance. AI-слой воркфлоу для сервисных компаний HVAC и сантехники в Испании.',
+    contactCta: 'Связаться с нами',
+    privacyLabel: 'Политика конфиденциальности',
+    termsLabel: 'Условия использования',
+    copyright: 'Fieldvance',
   },
 };
