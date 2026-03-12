@@ -12,7 +12,7 @@ The website should:
 - stay lightweight and easy to maintain
 
 ## 2. Product Summary
-Fieldvance is a vertical, mobile-first AI workflow platform for HVAC and plumbing service companies in Spain.
+Fieldvance is a vertical, mobile-first AI workflow platform for HVAC and plumbing service companies.
 
 It integrates with the customer’s CRM/FSM and turns each work order into a guided, validated technician workflow. It helps technicians arrive with better context, troubleshoot using approved technical knowledge, capture structured field evidence, generate a service report, and sync results back to the CRM/FSM.
 
@@ -28,8 +28,8 @@ It integrates with the customer’s CRM/FSM and turns each work order into a gui
 
 ## 4. Audience
 Primary audience:
-- HVAC service companies in Spain
-- Plumbing service companies in Spain
+- HVAC service companies
+- Plumbing service companies
 - Operations managers
 - Service managers
 - Founders / owners of field service businesses
@@ -47,7 +47,7 @@ It solves the last-mile field execution problem:
 Fieldvance standardizes preparation, execution, evidence capture, and reporting in one workflow.
 
 ## 6. Key Proof Points
-- Pilots with 3 Spanish companies
+- Pilots with 3 service companies
 - 18 daily active technicians
 - Around 200 tracked service calls
 - Average report time reduced from ~12 minutes to ~2 minutes
