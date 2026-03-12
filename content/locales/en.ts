@@ -11,7 +11,7 @@ export const enContent: LandingContent = {
     ],
   },
   hero: {
-    eyebrow: 'For HVAC and plumbing service teams in Spain',
+    eyebrow: 'For HVAC and plumbing service teams',
     title: 'Standardize field execution on every service call',
     subtitle:
       'Fieldvance adds a mobile AI workflow to your existing CRM/FSM so technicians arrive prepared, follow approved troubleshooting steps, and finish with validated reports.',
@@ -64,9 +64,9 @@ export const enContent: LandingContent = {
   },
   results: {
     title: 'Pilot results',
-    intro: 'Measured outcomes from early pilots with Spanish HVAC and plumbing companies.',
+    intro: 'Measured outcomes from early pilots with HVAC and plumbing companies.',
     metrics: [
-      { label: 'Pilot companies', value: '3', note: 'Live pilot environments in Spain' },
+      { label: 'Pilot companies', value: '3', note: 'Live pilot environments' },
       { label: 'Daily active technicians', value: '18', note: 'Using the mobile workflow each day' },
       { label: 'Tracked service calls', value: '~200', note: 'Calls executed and measured in Fieldvance' },
       { label: 'Average report time', value: '~12m → ~2m', note: 'Faster report generation and sync' },
@@ -128,6 +128,6 @@ export const enContent: LandingContent = {
     },
   },
   footer: {
-    note: '© Fieldvance. AI workflow layer for HVAC and plumbing service companies in Spain.',
+    note: '© Fieldvance. AI workflow layer for HVAC and plumbing service companies.',
   },
 };

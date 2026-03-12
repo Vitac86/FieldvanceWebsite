@@ -11,7 +11,7 @@ export const esContent: LandingContent = {
     ],
   },
   hero: {
-    eyebrow: 'Para equipos de servicio de HVAC y fontanería en España',
+    eyebrow: 'Para equipos de servicio de HVAC y fontanería',
     title: 'Estandariza la ejecución en campo en cada servicio',
     subtitle:
       'Fieldvance añade un flujo de trabajo móvil con IA a tu CRM/FSM actual para que los técnicos lleguen mejor preparados, sigan pasos de diagnóstico aprobados y terminen con informes validados.',
@@ -64,9 +64,9 @@ export const esContent: LandingContent = {
   },
   results: {
     title: 'Resultados de pilotos',
-    intro: 'Resultados medidos en los primeros pilotos con empresas españolas de HVAC y fontanería.',
+    intro: 'Resultados medidos en los primeros pilotos con empresas de HVAC y fontanería.',
     metrics: [
-      { label: 'Empresas piloto', value: '3', note: 'Entornos piloto activos en España' },
+      { label: 'Empresas piloto', value: '3', note: 'Entornos piloto activos' },
       { label: 'Técnicos activos al día', value: '18', note: 'Usando el flujo móvil cada día' },
       { label: 'Servicios registrados', value: '~200', note: 'Servicios ejecutados y medidos con Fieldvance' },
       { label: 'Tiempo medio de informe', value: '~12m → ~2m', note: 'Generación y sincronización de informes más rápidas' },
@@ -128,6 +128,6 @@ export const esContent: LandingContent = {
     },
   },
   footer: {
-    note: '© Fieldvance. Capa de flujo de trabajo con IA para empresas de servicio de HVAC y fontanería en España.',
+    note: '© Fieldvance. Capa de flujo de trabajo con IA para empresas de servicio de HVAC y fontanería.',
   },
 };
