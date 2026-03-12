@@ -17,7 +17,7 @@ export const esContent: LandingContent = {
       'Fieldvance añade un flujo de trabajo móvil con IA a tu CRM/FSM actual para que los técnicos lleguen mejor preparados, sigan pasos de diagnóstico aprobados y terminen con informes validados.',
     primaryCta: 'Reservar una demo',
     secondaryCta: 'Ver precios',
-    visualLabel: 'Marcador de posición de vista previa del flujo de producto',
+    visualLabel: 'Vista previa del flujo de producto',
   },
   howItWorks: {
     title: 'Cómo funciona',
