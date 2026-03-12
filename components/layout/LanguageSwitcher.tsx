@@ -8,15 +8,15 @@ type LanguageSwitcherProps = {
 
 export function LanguageSwitcher({ currentLocale }: LanguageSwitcherProps) {
   return (
-    <div className="flex items-center gap-1 rounded-md border border-slate-200 p-1 text-xs sm:text-sm" aria-label="Language switcher">
+    <div className="flex items-center gap-1 rounded-md border border-border-soft p-1 text-xs sm:text-sm" aria-label="Language switcher">
       {locales.map((locale) => (
         <Link
           key={locale}
           href={`/${locale}`}
           className={
             locale === currentLocale
-              ? 'rounded px-2 py-1 bg-slate-900 text-white'
-              : 'rounded px-2 py-1 text-slate-600 hover:bg-slate-100'
+              ? 'rounded px-2 py-1 bg-accent-primary text-surface-dark'
+              : 'rounded px-2 py-1 text-slate-600 hover:bg-accent-soft hover:text-accent-strong'
           }
         >
           {locale.toUpperCase()}

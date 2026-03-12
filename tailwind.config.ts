@@ -10,9 +10,18 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        brand: {
-          500: '#1E40AF',
-          600: '#1D4ED8',
+        accent: {
+          primary: 'var(--accent-primary)',
+          strong: 'var(--accent-primary-strong)',
+          soft: 'var(--accent-primary-soft)',
+          softStrong: 'var(--accent-primary-soft-strong)',
+        },
+        surface: {
+          dark: 'var(--surface-dark)',
+          darkSoft: 'var(--surface-dark-soft)',
+        },
+        border: {
+          soft: 'var(--border-soft)',
         },
       },
     },

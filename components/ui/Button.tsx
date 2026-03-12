@@ -10,8 +10,9 @@ const baseStyles =
   'inline-flex items-center justify-center rounded-lg px-6 py-3 text-sm font-semibold transition-all duration-150';
 
 const variantStyles: Record<NonNullable<ButtonProps['variant']>, string> = {
-  primary: 'bg-cyan-600 text-white hover:bg-cyan-500 shadow-[0_4px_12px_rgba(8,145,178,0.28)]',
-  secondary: 'border border-slate-300 bg-white text-slate-900 hover:border-cyan-600 hover:text-cyan-700',
+  primary:
+    'bg-accent-primary text-surface-dark hover:bg-accent-strong shadow-[0_6px_16px_rgba(15,191,159,0.32)] hover:shadow-[0_8px_20px_rgba(15,191,159,0.4)]',
+  secondary: 'border border-border-soft bg-white text-slate-900 hover:border-accent-primary hover:text-accent-strong',
   ghost: 'text-slate-700 hover:text-slate-900',
 };
 
