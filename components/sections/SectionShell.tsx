@@ -14,6 +14,7 @@ export function SectionShell({
       <div className="container-page">
         <div className="section-shell">
           <p className="section-kicker">{id.replaceAll('-', ' ')}</p>
+          <div className="accent-divider mt-3" aria-hidden />
           <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">{title}</h2>
           {intro ? <p className="mt-4 max-w-3xl text-sm leading-relaxed text-slate-600 sm:text-base">{intro}</p> : null}
           <div className="mt-8">{children}</div>

@@ -12,12 +12,19 @@ type HeaderProps = {
 
 export function Header({ lang, content }: HeaderProps) {
   return (
-    <header className="sticky top-0 z-30 border-b border-slate-200/90 bg-slate-50/90 backdrop-blur-md">
+    <header className="sticky top-0 z-30 border-b border-border-soft/90 bg-slate-50/90 backdrop-blur-md">
       <div className="container-page flex h-[72px] items-center justify-between gap-5">
-        <p className="text-lg font-extrabold tracking-tight text-slate-900">{content.brand}</p>
+        <p className="text-lg font-extrabold tracking-tight text-slate-900">
+          {content.brand}
+          <span className="ml-1 align-middle text-accent-primary">•</span>
+        </p>
         <nav aria-label="Section navigation" className="hidden items-center gap-6 md:flex">
           {content.nav.map((item) => (
-            <Link key={item.href} href={item.href} className="text-sm font-medium text-slate-600 transition hover:text-slate-900">
+            <Link
+              key={item.href}
+              href={item.href}
+              className="text-sm font-medium text-slate-600 transition hover:text-accent-strong"
+            >
               {item.label}
             </Link>
           ))}
