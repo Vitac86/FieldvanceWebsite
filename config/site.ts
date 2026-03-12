@@ -34,22 +34,40 @@ export const localeMetadata: Record<Locale, LocaleMeta> = {
   },
 };
 
-const DEFAULT_SITE_URL = 'http://localhost:3000';
+const LOCAL_HOSTNAMES = new Set(['localhost', '127.0.0.1', '::1']);
 
-export function getSiteUrl() {
-  const value = process.env.NEXT_PUBLIC_SITE_URL ?? process.env.SITE_URL;
-
+function normalizeSiteUrl(value?: string | null) {
   if (!value) {
-    return DEFAULT_SITE_URL;
+    return null;
   }
 
   try {
-    return new URL(value).toString().replace(/\/$/, '');
+    const parsed = new URL(value);
+
+    if (!['http:', 'https:'].includes(parsed.protocol)) {
+      return null;
+    }
+
+    if (LOCAL_HOSTNAMES.has(parsed.hostname.toLowerCase())) {
+      return null;
+    }
+
+    return parsed.toString().replace(/\/$/, '');
   } catch {
-    return DEFAULT_SITE_URL;
+    return null;
   }
 }
 
+export function getConfiguredSiteUrl() {
+  return normalizeSiteUrl(process.env.NEXT_PUBLIC_SITE_URL ?? process.env.SITE_URL);
+}
+
+export function hasConfiguredSiteUrl() {
+  return Boolean(getConfiguredSiteUrl());
+}
+
 export function getMetadataBase() {
-  return new URL(getSiteUrl());
+  const siteUrl = getConfiguredSiteUrl();
+
+  return siteUrl ? new URL(siteUrl) : undefined;
 }

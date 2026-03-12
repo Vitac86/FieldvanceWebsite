@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 
 import { isSupportedLocale, locales, type Locale } from '@/config/i18n';
+import { getConfiguredSiteUrl } from '@/config/site';
 import { legalContentByLocale } from '@/content/legal';
 
 type LangRouteParams = Promise<{ lang: string }>;
@@ -18,10 +19,12 @@ export async function generateMetadata({ params }: { params: LangRouteParams }):
     return {};
   }
 
+  const siteUrl = getConfiguredSiteUrl();
+
   return {
     title: legalContentByLocale[lang].terms.title,
     alternates: {
-      canonical: `/${lang}/terms`,
+      ...(siteUrl ? { canonical: `/${lang}/terms` } : {}),
       languages: {
         en: '/en/terms',
         es: '/es/terms',
