@@ -133,6 +133,7 @@ export const esContent: LandingContent = {
       default: 'Enviar solicitud',
       submitting: 'Enviando...',
       success: 'Gracias. Hemos recibido tu solicitud. Te contactaremos pronto.',
+      error: 'No pudimos enviar tu solicitud ahora. Por favor, inténtalo de nuevo en unos momentos.',
     },
   },
   footer: {

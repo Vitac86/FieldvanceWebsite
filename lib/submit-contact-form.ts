@@ -1,20 +1,29 @@
-export type ContactSubmissionPayload = {
-  name: string;
-  phone: string;
-  email: string;
-  message: string;
-  submittedAt: string;
+import { type ContactSubmissionPayload, validateContactPayload } from '@/lib/contact-form';
+
+export { type ContactSubmissionPayload };
+
+export type SubmitContactFormResult = {
+  ok: true;
 };
 
-export async function submitContactFormPlaceholder(payload: ContactSubmissionPayload) {
-  // Non-production submission flow.
-  // TODO: Replace this placeholder with a real backend or email provider integration.
-  // Suggested implementation point: create an API route that validates input and forwards the payload to your CRM/helpdesk.
-  console.info('[contact-form] placeholder submission received', payload);
+export async function submitContactForm(payload: ContactSubmissionPayload): Promise<SubmitContactFormResult> {
+  const localValidationErrors = validateContactPayload(payload);
 
-  await new Promise((resolve) => {
-    setTimeout(resolve, 500);
+  if (Object.keys(localValidationErrors).length > 0) {
+    throw new Error('validation_failed');
+  }
+
+  const response = await fetch('/api/contact', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(payload),
   });
+
+  if (!response.ok) {
+    throw new Error('submission_failed');
+  }
 
   return { ok: true };
 }
