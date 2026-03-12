@@ -128,6 +128,9 @@ export const enContent: LandingContent = {
     },
   },
   footer: {
-    note: '© Fieldvance. AI workflow layer for HVAC and plumbing service companies.',
+    contactCta: 'Contact us',
+    privacyLabel: 'Privacy Policy',
+    termsLabel: 'Terms',
+    copyright: 'Fieldvance',
   },
 };

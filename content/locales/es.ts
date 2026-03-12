@@ -128,6 +128,9 @@ export const esContent: LandingContent = {
     },
   },
   footer: {
-    note: '© Fieldvance. Capa de flujo de trabajo con IA para empresas de servicio de HVAC y fontanería.',
+    contactCta: 'Contáctanos',
+    privacyLabel: 'Política de privacidad',
+    termsLabel: 'Términos',
+    copyright: 'Fieldvance',
   },
 };
