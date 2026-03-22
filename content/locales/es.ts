@@ -76,7 +76,7 @@ export const esContent: LandingContent = {
     metrics: [
       { label: 'Tracción inicial', value: '3 empresas', note: 'Operando con flujos de Fieldvance en producción' },
       { label: 'Técnicos activos al día', value: '18', note: 'Usando el flujo móvil cada día' },
-      { label: 'Servicios registrados', value: '~200', note: 'Servicios ejecutados y medidos con Fieldvance' },
+      { label: 'Servicios registrados', value: '~400', note: 'Servicios ejecutados y medidos con Fieldvance' },
       { label: 'Tiempo medio de informe', value: '~12m → ~2m', note: 'Generación y sincronización de informes más rápidas' },
       { label: 'Errores críticos de reporte', value: '~22% → ~9%', note: 'Menor tasa de errores críticos en los informes' },
     ],
