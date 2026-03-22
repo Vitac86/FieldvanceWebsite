@@ -35,6 +35,9 @@ export function Footer({ content, lang }: { content: FooterContent; lang: Locale
           <Link href={`/${lang}/terms`} className="transition hover:text-accent-strong">
             {content.termsLabel}
           </Link>
+          <Link href="mailto:contact@fieldvance.com" className="transition hover:text-accent-strong">
+            contact@fieldvance.com
+          </Link>
           <p className="text-slate-500">© {year} {content.copyright}</p>
         </div>
       </div>
