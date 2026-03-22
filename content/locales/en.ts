@@ -76,7 +76,7 @@ export const enContent: LandingContent = {
     metrics: [
       { label: 'Early traction', value: '3 companies', note: 'Running live Fieldvance workflows' },
       { label: 'Daily active technicians', value: '18', note: 'Using the mobile workflow each day' },
-      { label: 'Tracked service calls', value: '~200', note: 'Calls executed and measured in Fieldvance' },
+      { label: 'Tracked service calls', value: '~400', note: 'Calls executed and measured in Fieldvance' },
       { label: 'Average report time', value: '~12m → ~2m', note: 'Faster report generation and sync' },
       { label: 'Critical reporting errors', value: '~22% → ~9%', note: 'Lower critical error rate in reports' },
     ],
