@@ -35,7 +35,7 @@ export function HeroSection({ content }: { content: HeroContent }) {
               <div className="rounded-lg bg-surface-dark-soft p-2.5 sm:p-3">
                 <div className="flex items-center justify-between">
                   <p className="text-xs uppercase tracking-wide text-slate-400">Guided steps</p>
-                  <p className="text-xs text-slate-400">3/4 complete</p>
+                  <p className="text-xs text-slate-400">2/3</p>
                 </div>
                 <div className="mt-2 space-y-1.5">
                   <div className="flex items-center justify-between rounded-md bg-white/5 px-2 py-1.5">
